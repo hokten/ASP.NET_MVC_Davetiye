@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Davetiye.Models;
 
 namespace Davetiye.Controllers
 {
@@ -15,9 +16,15 @@ namespace Davetiye.Controllers
             ViewBag.karsilama = saat < 12 ? "Günaydın" : "Tünaydın";
             return View();
         }
+        [HttpGet]
         public ViewResult DavetiyeFormu()
         {
             return View();
+        }
+        [HttpPost]
+        public ViewResult DavetiyeFormu(DavetiyeCevap formdanyollanan)
+        {
+            return View("Thanks", formdanyollanan);
         }
     }
 }
