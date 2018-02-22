@@ -15,5 +15,9 @@ namespace Davetiye.Controllers
             ViewBag.karsilama = saat < 12 ? "Günaydın" : "Tünaydın";
             return View();
         }
+        public ViewResult DavetiyeFormu()
+        {
+            return View();
+        }
     }
 }
