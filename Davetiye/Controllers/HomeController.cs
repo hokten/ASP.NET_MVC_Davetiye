@@ -9,9 +9,9 @@ namespace Davetiye.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        public ViewResult Index()
         {
-            return "Merhaba ASP.NET";
+            return View();
         }
     }
 }
