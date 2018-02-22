@@ -12,7 +12,22 @@
     <title>DavetiyeFormu</title>
 </head>
 <body>
-    <div> 
+    <div>
+        @using(Html.BeginForm())
+        {
+            <p>Adınız Soyadınız : @Html.TextBoxFor(x => x.AdSoyad) </p>
+            <p>Email Adres : @Html.TextBoxFor(x => x.Email) </p>
+            <p>Telefonunuz : @Html.TextBoxFor(x => x.Telefon) </p>
+            <p>Katılacak mısınız
+                @Html.DropDownListFor(x => x.KatilimDurumu,
+                    new[] {
+                                   new SelectListItem() {Text= "Evet", Value=bool.TrueString },
+                                   new SelectListItem() {Text= "Hayır", Value=bool.FalseString }
+                        },
+                    "Seçiniz")
+                </p>
+                <input type="submit" value="Gönder" />
+        }
     </div>
 </body>
 </html>
