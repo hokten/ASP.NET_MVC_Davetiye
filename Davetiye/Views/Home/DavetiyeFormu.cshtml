@@ -15,6 +15,7 @@
     <div>
         @using(Html.BeginForm())
         {
+            @Html.ValidationSummary()
             <p>Adınız Soyadınız : @Html.TextBoxFor(x => x.AdSoyad) </p>
             <p>Email Adres : @Html.TextBoxFor(x => x.Email) </p>
             <p>Telefonunuz : @Html.TextBoxFor(x => x.Telefon) </p>

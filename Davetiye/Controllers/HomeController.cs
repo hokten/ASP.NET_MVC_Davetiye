@@ -24,7 +24,14 @@ namespace Davetiye.Controllers
         [HttpPost]
         public ViewResult DavetiyeFormu(DavetiyeCevap formdanyollanan)
         {
-            return View("Thanks", formdanyollanan);
+            if(ModelState.IsValid)
+            {
+                return View("Thanks", formdanyollanan);
+            } else
+            {
+                return View();
+            }
+            
         }
     }
 }
