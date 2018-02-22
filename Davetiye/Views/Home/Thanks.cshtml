@@ -1,0 +1,28 @@
+﻿@model Davetiye.Models.DavetiyeCevap
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div>
+        <h1>Teşekkürler Sayın @Model.AdSoyad</h1>
+        @if (Model.KatilimDurumu == true)
+        {
+            @:Sizi aramızda görmekten mutluluk duyacağız.
+        } else
+        {
+            @:Sizi aramızda görmeyi çok isterdik.
+        }
+
+
+    </div>
+</body>
+</html>
