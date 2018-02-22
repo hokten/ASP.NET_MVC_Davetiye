@@ -11,6 +11,8 @@ namespace Davetiye.Controllers
         // GET: Home
         public ViewResult Index()
         {
+            int saat = DateTime.Now.Hour;
+            ViewBag.karsilama = saat < 12 ? "Günaydın" : "Tünaydın";
             return View();
         }
     }
